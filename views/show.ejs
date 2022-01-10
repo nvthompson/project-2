@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs')%>
+<body>
+    <h1>Show Page</h1>
+    <h3><%= destination.name %></h3>
+    <h4><%= destination.description %></h4>
+    <img src="<%= destination.img %>">
+    <nav>
+        <a href="/destinations">Back</a>
+    </nav>
+</body>
+</html>

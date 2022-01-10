@@ -47,7 +47,11 @@ app.post('/destinations', (req,res)=>{
 //edit
 
 //show
-
+app.get('/destinations/:id', (req,res) =>{
+    Destination.findById(req.params.id, (err, destination) =>{
+        res.render('show.ejs', {destination});
+    })
+})
 
 //listener
 app.listen(PORT, () =>{
