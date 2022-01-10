@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs')%>
+<body>
+    <h1>New Page</h1>
+    <form action="/destinations" method='post'>
+        Name: <input type="text" name='name'/><br />
+        Description: <input type="text" name='description'/><br />
+        Image: <input type='text' src="url" name='img'/><br />
+        <input type="submit" value="Add Destination">
+      </form>
+</body>
+</html>

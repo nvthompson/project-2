@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs')%>
+<body>
+    <h1>Index Page</h1>
+    <ul class='indexUl'>
+        <% destinations.forEach(destination => { %>
+            <li>
+                <a class='indexName' href="/destinations/<%=destination._id; %>">
+                    <%=destination.name; %>
+                </a>
+                <a class='indexImg'src="/destinations/<%= destination._id; %>">
+                    <img src="<%= destination.img %>" >
+                </a>   
+            </li>
+       <% }) %>
+</body>
+</html>
