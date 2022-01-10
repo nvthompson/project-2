@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 const Destination = require('./models/destination')
+const destinationsController = require('./controllers/destinations')
 // initialize the express app
 const app = express();
 // configure server settings
@@ -24,54 +25,8 @@ app.subscribe(morgan('morgan'));
 
 //routes
 app.get('/', (req,res) => res.redirect('/destinations'));
-//index
-app.get('/destinations', (req,res) =>{
-    Destination.find({},(err, destinations) =>{
-        res.render('index.ejs', {destinations});
-    });
-})
-//new
-app.get('/destinations/new', (req,res)=>{
-    res.render('new.ejs')
-})
-//delete
-app.delete('/destinations/:id', (req,res) =>{
-    Destination.findByIdAndDelete(req.params.id, (err,data)=>{
-        res.redirect('/destinations')
-    })
-})
-//update
-app.put('/destinations/:id', (req,res) =>{
-    Destination.findByIdAndUpdate(
-        req.params.id,
-        req.body,
-        {
-            new: true,
-        },
-        (error, updatedDestination) =>{
-            res.redirect(`/destinations/${req.params.id}`)
-        }
-    )
-})
-//create
-app.post('/destinations', (req,res)=>{
-    Destination.create(req.body, (err, destination)=>{
-        res.redirect('/destinations')
-    })
-})
 
-//edit
-app.get('/destinations/:id/edit', (req,res) =>{
-    Destination.findById(req.params.id, (err, destination)=>{
-        res.render('edit.ejs', {destination})
-    })
-})
-//show
-app.get('/destinations/:id', (req,res) =>{
-    Destination.findById(req.params.id, (err, destination) =>{
-        res.render('show.ejs', {destination});
-    })
-})
+app.use('/destinations', destinationsController)
 
 //listener
 app.listen(PORT, () =>{
