@@ -20,6 +20,7 @@ db.on('error', (err) => console.log(err.message + ' is mongo not running?'));
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
+app.subscribe(morgan('morgan'));
 
 //routes
 app.get('/', (req,res) => res.redirect('/destinations'));
@@ -34,7 +35,11 @@ app.get('/destinations/new', (req,res)=>{
     res.render('new.ejs')
 })
 //delete
-
+app.delete('/destinations/:id', (req,res) =>{
+    Destination.findByIdAndDelete(req.params.id, (err,data)=>{
+        res.redirect('/destinations')
+    })
+})
 //update
 
 //create

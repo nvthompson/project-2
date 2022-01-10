@@ -12,6 +12,9 @@
                 <a class='indexImg'src="/destinations/<%= destination._id; %>">
                     <img src="<%= destination.img %>" >
                 </a>   
+                <form class='deletePos' action="/destinations/<%= destination.id %>?_method=DELETE" method="POST" >
+                    <input class='deleteSty' type="submit" value="DELETE" />
+                </form>
             </li>
         <% }) %>
     </ul>       
