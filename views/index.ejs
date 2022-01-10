@@ -15,6 +15,7 @@
                 <form class='deletePos' action="/destinations/<%= destination.id %>?_method=DELETE" method="POST" >
                     <input class='deleteSty' type="submit" value="DELETE" />
                 </form>
+                <a href="/destinations/<%=destination._id %>/edit">Edit</a>
             </li>
         <% }) %>
     </ul>       

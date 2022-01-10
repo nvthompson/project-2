@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs')%>
+<body>
+    <h1>Edit Page</h1>
+    <form action="/destinations/<%=destination._id%>?_method=PUT" method="POST">
+        Name: <input type="text" name="name" value="<%=destination.name%>" /><br />
+        Description: <input type="text" name="description" value="<%=destination.description%>" /><br />
+        Image: <input type="text" name="img" value="<%=destination.img%>" /><br />
+        <br />
+        <input type="submit" value="Submit Changes" />
+      </form>
+</body>
+</html>

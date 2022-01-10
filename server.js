@@ -41,7 +41,18 @@ app.delete('/destinations/:id', (req,res) =>{
     })
 })
 //update
-
+app.put('/destinations/:id', (req,res) =>{
+    Destination.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        {
+            new: true,
+        },
+        (error, updatedDestination) =>{
+            res.redirect(`/destinations/${req.params.id}`)
+        }
+    )
+})
 //create
 app.post('/destinations', (req,res)=>{
     Destination.create(req.body, (err, destination)=>{
@@ -50,7 +61,11 @@ app.post('/destinations', (req,res)=>{
 })
 
 //edit
-
+app.get('/destinations/:id/edit', (req,res) =>{
+    Destination.findById(req.params.id, (err, destination)=>{
+        res.render('edit.ejs', {destination})
+    })
+})
 //show
 app.get('/destinations/:id', (req,res) =>{
     Destination.findById(req.params.id, (err, destination) =>{
