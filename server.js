@@ -39,7 +39,7 @@ app.get('/destinations/new', (req,res)=>{
 
 //create
 app.post('/destinations', (req,res)=>{
-    Destination.create(req.body, (err, log)=>{
+    Destination.create(req.body, (err, destination)=>{
         res.redirect('/destinations')
     })
 })
