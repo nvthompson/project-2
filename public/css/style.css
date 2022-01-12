@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    font-family: 'Lobster', cursive;
+    background-color: #F0E9D2;
+}
+ .show{
+    text-align: center;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    background-color: #678983;
+    color: #E6DDC4;
+    text-shadow: 0 0 ;
+}
+nav, nav > ul {
+    display: flex;
+    align-items: center;
+}
+
+header > nav > ul {
+    list-style: none;
+}
+
+header li {
+    margin-right: 1.7rem;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style-type: none;
+    text-decoration: none;
+    color: inherit;
+    color: lightgoldenrodyellow;
+}
+.indexUl{
+    display:grid;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-decoration: none;
+}
+.indexName{
+    color: inherit;
+    display: flex; 
+    font-size: 22px;
+    text-decoration: none;
+    justify-content: center;
+    background-color: #181D31;
+    border: lightgoldenrodyellow outset;
+    border-radius: 25px;
+}
+.indexImg{
+    position: relative; 
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    justify-content: space-evenly;
+}
+
+.edit {
+    text-decoration: none;
+    color: inherit;
+    color: black;
+    border: seagreen outset;
+    border-radius: 15px;
+    padding:2px;
+    line-height: 5rem;
+    
+}
+.deletePos{
+  
+}
+.deleteSty{
+    display: flex;
+    justify-content: center;
+    border: lightcoral inset; 
+    background-color: whitesmoke;
+    border-radius: 15px;
+    padding:5px;
+}
+
+
+.newForm{
+    position:absolute;
+    left:0;
+    margin: 20px;
+    background-color: #E6DDC4;
+}
+.sidebar {
+    width: 50%;
+    background: url('https://images.unsplash.com/photo-1558486012-817176f84c6d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=740&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+  }

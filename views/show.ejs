@@ -2,10 +2,16 @@
 <html lang="en">
 <%- include('./partials/head.ejs')%>
 <body>
-    <h1>Show Page</h1>
-    <h3><%= destination.name %></h3>
+    <%- include('./partials/header.ejs')%>
+    <h1 style="text-align: center;"><%= destination.name %></h1>
     <h4><%= destination.description %></h4>
     <img src="<%= destination.img %>">
+    <h3>Restaurants</h3>
+    <h4><%= destination.restaurants %></h4>
+    <h3>Museums</h3>
+    <h4><%= destination.museums %></h4>
+    <a class='edit' href="/destinations/<%=destination._id %>/edit">Edit</a>
+    <main></main>
     <nav>
         <a href="/destinations">Back</a>
     </nav>

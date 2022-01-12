@@ -21,7 +21,8 @@ db.on('error', (err) => console.log(err.message + ' is mongo not running?'));
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
-app.subscribe(morgan('morgan'));
+app.use(morgan('dev'));
+app.use(express.static('public'));
 
 //routes
 app.get('/', (req,res) => res.redirect('/destinations'));

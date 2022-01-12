@@ -2,7 +2,8 @@
 <html lang="en">
 <%- include('./partials/head.ejs')%>
 <body>
-    <h1>Index Page</h1>
+    <%- include('./partials/header.ejs')%>
+    <h1>Where Are We Going?</h1>
     <ul class='indexUl'>
         <% destinations.forEach(destination => { %>
             <li>
@@ -15,12 +16,9 @@
                 <form class='deletePos' action="/destinations/<%= destination.id %>?_method=DELETE" method="POST" >
                     <input class='deleteSty' type="submit" value="DELETE" />
                 </form>
-                <a href="/destinations/<%=destination._id %>/edit">Edit</a>
+                
             </li>
         <% }) %>
     </ul>       
-    <nav>
-        <a href="destinations/new">Add a New Destination</a>
-    </nav> 
 </body>
 </html>
