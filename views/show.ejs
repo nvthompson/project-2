@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head.ejs')%>
-<body>
-    <%- include('./partials/header.ejs')%>
-    <h1 style="text-align: center;"><%= destination.name %></h1>
-    <h4><%= destination.description %></h4>
-    <img src="<%= destination.img %>">
-    <h3>Restaurants</h3>
-    <h4><%= destination.restaurants %></h4>
-    <h3>Museums</h3>
-    <h4><%= destination.museums %></h4>
-    <a class='edit' href="/destinations/<%=destination._id %>/edit">Edit</a>
-    <main></main>
-    <nav>
-        <a href="/destinations">Back</a>
-    </nav>
-</body>
+
+    <body>
+        <%- include('./partials/header.ejs')%>
+            <h1 style="text-align: center;">
+                <%= destination.name %>
+            </h1>
+            <div class="showContainer">
+                <div class="item-1">
+                    <h2 >Description</h2>
+                    <h4 style="font-family:'Times New Roman', Times, serif;">
+                        <%= destination.description %>
+                    </h4>
+                </div>
+                <div class="item-2">
+                    <img class='showImg' src="<%= destination.img %>">
+                </div>
+                <div class="item-3">
+                    <h2>Restaurants</h2>
+                    <!-- <img src="https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt=""> -->
+                    <h4 style="font-family:'Times New Roman', Times, serif;">
+                        <%= destination.restaurants %>
+                    </h4>
+                </div>
+                <div class="item-4">
+                    <h2>Museums</h2>
+                    <!-- <img src="https://images.pexels.com/photos/5825359/pexels-photo-5825359.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt=""> -->
+                    <h4 style="font-family:'Times New Roman', Times, serif;">
+                        <%= destination.museums %>
+                    </h4>
+                </div>
+                <div class="item-5">
+                    <h2>Attractions</h2>
+                    <h4 style="font-family:'Times New Roman', Times, serif;">
+                        <%= destination.attractions %>
+                    </h4>
+                </div>
+            </div>
+            <a class='edit' href="/destinations/<%=destination._id %>/edit">Edit</a>
+            
+    </body>
+ 
 </html>

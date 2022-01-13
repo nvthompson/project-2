@@ -3,7 +3,7 @@
 <%- include('./partials/head.ejs')%>
 <body>
     <%- include('./partials/header.ejs')%>
-    <div class="sidebar"></div>
+    <div class="sidebar">
     <form class='newForm' action="/destinations" method='post'>
         <h1>New Page</h1>
         Name: <input type="text" name='name'/><br />
@@ -11,6 +11,7 @@
         Image: <input type='text' src="url" name='img'/><br />
         Restaurants: <input type="text" name='restaurants'/><br />
         Museums: <input type="text" name='museums'/><br />
+        Attractions: <input type="text" name='attractions'/><br />
         <input type="submit" value="Add Destination">
       </form>
     </div>

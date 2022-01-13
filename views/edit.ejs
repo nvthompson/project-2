@@ -3,8 +3,8 @@
 <%- include('./partials/head.ejs')%>
 <body>
     <%- include('./partials/header.ejs')%>
-    <h1>Edit Page</h1>
-    <form action="/destinations/<%=destination._id%>?_method=PUT" method="POST">
+    <form class='editForm' action="/destinations/<%=destination._id%>?_method=PUT" method="POST">
+        <h1>Edit Page</h1>
         Name: <input type="text" name="name" value="<%=destination.name%>" /><br />
         Description: <input type="text" name="description" value="<%=destination.description%>" /><br />
         Image: <input type="text" name="img" value="<%=destination.img%>" /><br />
