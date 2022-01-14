@@ -91,45 +91,16 @@ li{
     display: flex;
     align-content: center;
 }
-/* .showContainer{
-    display: grid ;
-    grid-template-columns: 100px 50px 100px 50px 10px;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "img img descrip descrip"
-    ". . res res"
-    "mus mus att att";
-}
 
-.item-1{
-    grid-area: 'descrip';
-}
-.item-2{
-    grid-area: 'img';
-    padding: 200%;
-    
-}
-.item-3{
-    grid-area: 'res';
-    
-
-}
-.item-4{
-    grid-area: 'mus';
-
-}
-.item-5{
-    grid-area: 'att';
-
-} */
 .edit {
     text-decoration: none;
     color: inherit;
     color: black;
-    border: seagreen outset;
+    background-color: gold;
+    border: gold outset;
     border-radius: 15px;
-    padding:2px;
-    line-height: 5rem; 
+    padding:10px;
+    line-height: 2rem; 
 }
 
 .deleteSty{
@@ -156,16 +127,6 @@ li{
     margin: 20px;
     background-color: #E6DDC4;
 }
-
-.hero{
-}
-/* .plane{
-    text-align: center; */
-    /* background: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(https://image.pngaaa.com/898/314898-middle.png); 
-    background-color: rgba(255, 0, 0, 0.5);
-    background-repeat: no-repeat;
-    background-color: transparent; */
-/* } */
 
 
 @media only screen 
